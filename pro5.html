@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дереза</title>
+  <link rel="icon" type="image/png" href="123.png"><style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f4f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #1565c0;
+      color: #fff;
+      padding: 15px 20px;
+    }
+
+    .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      height: 36px;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    .lang-select {
+      text-align: right;
+      margin-top: 10px;
+    }
+
+    #languageSelect {
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: none;
+      font-weight: bold;
+      color: #1565c0;
+      cursor: pointer;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .product-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .product-title {
+      font-size: 1.8rem;
+      margin-top: 20px;
+      color: #1565c0;
+    }
+
+    .product-description {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background: #1565c0;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .back-button:hover {
+      background: #0d47a1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1565c0;
+      font-size: 0.9em;
+      color: #fff;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="top-row">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="SG Jewelry логотипі">
+      </a>
+      <nav>
+        <a href="index.html" id="nav-home">Басты бет</a>
+        <a href="contact.html" id="nav-contact">Байланыс</a>
+      </nav>
+    </div>
+    <div class="lang-select">
+      <select id="languageSelect" onchange="changeLanguage()">
+        <option value="kk">Қазақша 🇰🇿</option>
+        <option value="ru">Русский 🇷🇺</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- Product -->
+  <div class="container">
+    <img src="өнім5.jpeg" alt="Чудо Бриллиант" class="product-image">
+    <h1 class="product-title" id="product-title">Дереза</h1>
+    <p class="product-description" id="product-description">
+<br>Тонус берудің ең жақсы препараты
+<br><b>Қолдану көрсеткіштері:</b>
+<br>• Аз қандылық (анемия), қан кетулер;
+<br>• Ағзаны жүктілікке дайындау;
+<br>• Етеккір циклінің бұзылуы;
+<br>• Түсік тастау қаупінің алдын алу және ұрықты қорғау;
+<br>• Босанғаннан кейін, шамадан тыс физикалық және ақыл-ой жүктемесінен кейін қалпына келу;
+<br>• Әлсіздік, өзін жайсыз сезіну;
+<br>• Күнделікті саулығын сақтау қажет адамдарға;
+<br>• Бел мен тізедегі әлсіздік пен сырқырау;
+<br>• Иммунитетті арттыру;
+<br>• Бет пен тері күтімі;
+<br>• Сүйектерді нығайту және буындар мен сіңірлерді қорғау.
+
+
+ 
+    </p>
+
+    <a href="index.html" class="back-button" id="back-button">← Артқа қайту</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 SG suundikovagulbanu. Барлық құқықтар қорғалған.
+  </footer>
+
+<script>
+function changeLanguage() {
+  const lang = document.getElementById("languageSelect").value;
+
+  const elements = {
+    title: document.getElementById("product-title"),
+    description: document.getElementById("product-description"),
+    back: document.getElementById("back-button"),
+    navHome: document.getElementById("nav-home"),
+    navContact: document.getElementById("nav-contact")
+  };
+
+  if (lang === "kk") {
+    elements.title.textContent = "Дереза";
+    elements.description.innerHTML = `
+<br>Тонус берудің ең жақсы препараты
+<br><b>Қолдану көрсеткіштері:</b>
+<br>• Аз қандылық (анемия), қан кетулер;
+<br>• Ағзаны жүктілікке дайындау;
+<br>• Етеккір циклінің бұзылуы;
+<br>• Түсік тастау қаупінің алдын алу және ұрықты қорғау;
+<br>• Босанғаннан кейін, шамадан тыс физикалық және ақыл-ой жүктемесінен кейін қалпына келу;
+<br>• Әлсіздік, өзін жайсыз сезіну;
+<br>• Күнделікті саулығын сақтау қажет адамдарға;
+<br>• Бел мен тізедегі әлсіздік пен сырқырау;
+<br>• Иммунитетті арттыру;
+<br>• Бет пен тері күтімі;
+<br>• Сүйектерді нығайту және буындар мен сіңірлерді қорғау.
+    `;
+    elements.back.textContent = "← Артқа қайту";
+    elements.navHome.textContent = "Басты бет";
+    elements.navContact.textContent = "Байланыс";
+  } else {
+    elements.title.textContent = "Дереза";
+    elements.description.innerHTML = `
+<br>Лучший препарат для тонизации
+<br><b>Показания к применению:</b>
+<br>• Малокровие (анемия), кровотечения;
+<br>• Подготовка организма к беременности;
+<br>• Нарушения менструального цикла;
+<br>• Предупреждение выкидыша и защита плода;
+<br>• Восстановление после родов, чрезмерной физической и умственной нагрузки;
+<br>• Состояние недомогания;
+<br>• Людям, нуждающимся в повседневном оздоровлении;
+<br>• Ломота и слабость в пояснице и коленях;
+<br>• Повышение иммунитета;
+<br>• Уход за лицом и кожей;
+<br>• Укрепление костей и защита суставов и сухожилий.
+    `;
+    elements.back.textContent = "← Назад";
+    elements.navHome.textContent = "Главная";
+    elements.navContact.textContent = "Контакты";
+  }
+}
+</script>
+
+
+</body>
+</html>

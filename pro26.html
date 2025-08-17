@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ВОЛШЕБНАЯ КАРТА</title>
+  <link rel="icon" type="image/png" href="123.png">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f4f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #1565c0;
+      color: #fff;
+      padding: 15px 20px;
+    }
+
+    .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      height: 36px;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    .lang-select {
+      text-align: right;
+      margin-top: 10px;
+    }
+
+    #languageSelect {
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: none;
+      font-weight: bold;
+      color: #1565c0;
+      cursor: pointer;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .product-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .product-title {
+      font-size: 1.8rem;
+      margin-top: 20px;
+      color: #1565c0;
+    }
+
+    .product-description {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background: #1565c0;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .back-button:hover {
+      background: #0d47a1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1565c0;
+      font-size: 0.9em;
+      color: #fff;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="top-row">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="SG Jewelry логотипі">
+      </a>
+      <nav>
+        <a href="index.html" id="nav-home">Басты бет</a>
+        <a href="contact.html" id="nav-contact">Байланыс</a>
+      </nav>
+    </div>
+    <div class="lang-select">
+      <select id="languageSelect" onchange="changeLanguage()">
+        <option value="kk">Қазақша 🇰🇿</option>
+        <option value="ru">Русский 🇷🇺</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- Product -->
+  <div class="container">
+    <img src="өнім26.jpeg" alt="Чудо Бриллиант" class="product-image">
+    <h1 class="product-title" id="product-title">Сиқырлы карта</h1>
+    <p class="product-description" id="product-description">
+      Мобильді телефон батареясына арналған бірегей карточка – интеграл, құрамында нанометр деңгейіндегі сирек металл және арнайы өңделген металл фольгалы дөңгелек үйлесім тапқан. Бұл өнім қос әсер береді: электромагниттік сәулеленуді төмендетеді және батареяның қызмет ету мерзімін ұзартады.
+
+<br><b>Артықшылықтары:</b>
+<br>• Батареяның қызмет мерзімін 2 есеге ұзартады;
+<br>• Күту режимін 50%-дан астамға арттырады;
+<br>• Батарея зарядтау уақытын 50%-ға қысқартады;
+<br>• Сәулеленуден тиімді қорғайды.
+    </p>
+
+    <a href="index.html" class="back-button" id="back-button">← Артқа қайту</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 SG suundikovagulbanu. Барлық құқықтар қорғалған.
+  </footer>
+
+  <script>
+    function changeLanguage() {
+      const lang = document.getElementById("languageSelect").value;
+
+      const elements = {
+        title: document.getElementById("product-title"),
+        description: document.getElementById("product-description"),
+        back: document.getElementById("back-button"),
+        navHome: document.getElementById("nav-home"),
+        navContact: document.getElementById("nav-contact")
+      };
+
+      if (lang === "kk") {
+        elements.title.textContent = "Чудо Бриллиант";
+        elements.description.innerHTML = `
+          Бұл ерекше «Чудо Бриллиант» әшекей бұйымы – заманауи сән мен нәзіктікті біріктірген туынды.  
+          Жоғары сапалы тастан жасалған, жарқыраған әрі сәнді көрінісімен кез келген кеште көздің жауын алады.  
+          Арнайы дизайн арқылы әйелдің сұлулығын ерекше айқындайды.  
+          <br><br>
+          💎 Материалы: Күміс / алтын жалатылған  
+          💎 Тасы: Жоғары сапалы цирконий  
+          💎 Өлшемі: Стандартты  
+          💎 Қаптамасы: Сыйлық қорапшасы  
+        `;
+        elements.back.textContent = "← Артқа қайту";
+        elements.navHome.textContent = "Басты бет";
+        elements.navContact.textContent = "Байланыс";
+      } else {
+        elements.title.textContent = "Волшебная карта";
+        elements.description.innerHTML = `
+  Уникальная карточка для батарейки мобильного телефона – интеграл, в котором органически сочетается редкий металл размером порядка нанометра и металлический фольговый кружок специальной обработки. Данная продукция имеет двойной эффект: снижает электромагнитное излучение и продлевает срок службы батарейки.
+
+<br><b>Преимущества:</b>
+<br>• Продлевает срок службы батарейки в 2 раза;
+<br>• Увеличивает режим ожидания более чем на 50%;
+<br>• Сокращает время зарядки батарейки на 50%;
+<br>• Эффективно защищает от излучений.  
+        `;
+        elements.back.textContent = "← Назад";
+        elements.navHome.textContent = "Главная";
+        elements.navContact.textContent = "Контакты";
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SG suundikovagulbanu.shop</title>
+  <link rel="icon" type="image/png" href="123.png">
+
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 20px;
+      background: #007bff;
+      color: white;
+      flex-wrap: wrap;
+    }
+
+    header img {
+      height: 40px;
+    }
+
+    .search {
+      flex: 1 1 100%;
+      margin: 10px 0;
+    }
+
+    .search input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      font-size: 16px;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .menu a,
+    .menu select {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      background: transparent;
+      border: none;
+      font-size: 16px;
+    }
+
+    .menu select {
+      padding: 5px;
+      border-radius: 5px;
+      background: white;
+      color: #007bff;
+    }
+
+    .catalog {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .item {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+    }
+
+    .item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .item h3 {
+      margin: 10px 0 5px;
+      font-size: 18px;
+    }
+
+    .item p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .item a {
+      display: inline-block;
+      margin-top: 10px;
+      background: #25D366;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #007bff;
+      color: white;
+      font-size: 14px;
+    }
+
+    /* Телефон және планшетке бейімдеу */
+    @media (min-width: 600px) {
+      .catalog {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="Логотип" />
+
+  <!-- Жаңа әлеуметтік желі иконкалар -->
+  <div class="social-icons">
+    <a href="https://www.instagram.com/gulbanu_huashen?igsh=MXYwNGh2NHhjMGhobw==" target="_blank">
+      <img src="instagram.png" alt="Instagram">
+    </a>
+    <a href="https://youtube.com/@suundikovagulbanu?si=YWRO8wdmgPPOjdR5" target="_blank">
+      <img src="youtube.png" alt="YouTube">
+    </a>
+    <a href="https://www.tiktok.com/@gulbanuhuashen" target="_blank">
+      <img src="tiktok.png" alt="TikTok">
+    </a>
+  </div>
+
+  <div class="search">
+    <input type="text" id="searchInput" placeholder="Өнім іздеу..." onkeyup="searchProducts()" />
+  </div>
+
+  <div class="menu">
+    <a href="contact.html" id="contactLink">Байланыс</a>
+    <select id="languageSelect" onchange="changeLanguage()">
+      <option value="kk">Қазақша 🇰🇿</option>
+      <option value="ru">Русский 🇷🇺</option>
+    </select>
+  </div>
+</header>
+
+
+
+<section class="catalog" id="catalog">
+  <!-- Үлгі өнімдер -->
+  <div class="item" data-title-kk="Чудо Бриллиант" data-desc-kk="" data-btn-kk="толықырақ"
+                data-title-ru="Чудо Бриллиант" data-desc-ru="" data-btn-ru="подробнее">
+    <img src="өнім1.jpeg" />
+    <h3></h3>
+    <p></p>
+    <a href="pro1.html" target="_blank"></a>
+  </div>
+
+  <div class="item" data-title-kk="Қолғап" data-desc-kk="" data-btn-kk="толықырақ"
+                data-title-ru="Перчатка" data-desc-ru="" data-btn-ru="Подробнее">
+    <img src="өнім2.jpeg" />
+    <h3></h3>
+    <p></p>
+    <a href="pro2.html" target="_blank"></a>
+  </div>
+  
+  <div class="item" data-title-kk="Кордицепс" data-desc-kk="" data-btn-kk="толықырақ"
+                data-title-ru="Кордицепс" data-desc-ru="" data-btn-ru="Подробнее">
+    <img src="өнім3.jpeg" />
+    <h3></h3>
+    <p></p>
+    <a href="pro3.html" target="_blank"></a>
+  </div>
+     
+     <div class="item" data-title-kk="Клюкова" data-desc-kk="" data-btn-kk="толықырақ"
+                data-title-ru="Клюкова" data-desc-ru="" data-btn-ru="Подробнее">
+    <img src="өнім4.jpeg" />
+    <h3></h3>
+    <p></p>
+    <a href="pro4.html" target="_blank"></a>
+  </div>
+  
+     <div class="item" data-title-kk="Дереза" data-desc-kk="" data-btn-kk="толықырақ"
+                data-title-ru="Дереза" data-desc-ru="" data-btn-ru="Подробнее">
+    <img src="өнім5.jpeg" />
+    <h3></h3>
+    <p></p>
+    <a href="pro5.html" target="_blank"></a>
+  </div>
+
+<div class="item" 
+     data-title-kk="Тізелік" 
+     data-desc-kk="" 
+     data-btn-kk="толықырақ"
+     data-title-ru="Наколенники" 
+     data-desc-ru="" 
+     data-btn-ru="Подробнее">
+     
+    <img src="өнім8.jpeg" alt="Тізелік / Наколенники" />
+    <h3>Тізелік</h3>
+    <p></p>
+    <a href="pro8.html" target="_blank">Толықырақ</a>
+</div>
+
+
+<div class="item" data-title-kk="тобықтық" data-desc-kk="" data-btn-kk="толықырақ"
+                data-title-ru="Налодыжники" data-desc-ru="" data-btn-ru="Подробнее">
+    <img src="өнім9.jpeg" />
+    <h3></h3>
+    <p></p>
+    <a href="pro9.html" target="_blank"></a>
+  </div>
+
+<div class="item" data-title-kk="Қол білезіктер" data-desc-kk="" data-btn-kk="толықырақ"
+                data-title-ru="Напулсники" data-desc-ru="" data-btn-ru="Подробнее">
+    <img src="өнім10.jpeg" />
+    <h3></h3>
+    <p></p>
+    <a href="pro10.html" target="_blank"></a>
+  </div>
+
+<div class="item" data-title-kk="Футболка" data-desc-kk="" data-btn-kk="толықырақ"
+                data-title-ru="Футболка" data-desc-ru="" data-btn-ru="Подробнее">
+    <img src="өнім11.jpeg" />
+    <h3></h3>
+    <p></p>
+    <a href="pro11.html" target="_blank"></a>
+  </div>
+ 
+ <div class="item" data-title-kk="Белдік" data-desc-kk="" data-btn-kk="толықырақ"
+                data-title-ru="Пояс" data-desc-ru="" data-btn-ru="Подробнее">
+    <img src="өнім12.jpeg" />
+    <h3></h3>
+    <p></p>
+    <a href="pro12.html" target="_blank"></a>
+  </div>
+
+     <div class="item" data-title-kk="тапочка" data-desc-kk="" data-btn-kk="толықырақ"
+                data-title-ru="тапочка" data-desc-ru="" data-btn-ru="Подробнее">
+    <img src="өнім13.jpeg" />
+    <h3></h3>
+    <p></p>
+    <a href="pro13.html" target="_blank"></a>
+  </div>
+
+     <div class="item" data-title-kk="Пижама" data-desc-kk="" data-btn-kk="толықырақ"
+                data-title-ru="Пижама" data-desc-ru="" data-btn-ru="Подробнее">
+    <img src="өнім14.jpeg" />
+    <h3></h3>
+    <p></p>
+    <a href="pro14.html" target="_blank"></a>
+  </div>
+
+<div class="item" data-title-kk="Қолға тағатын браслет" data-desc-kk="" data-btn-kk="толықырақ"
+                data-title-ru="браслет" data-desc-ru="" data-btn-ru="Подробнее">
+    <img src="өнім15.jpeg" />
+    <h3></h3>
+    <p></p>
+    <a href="pro15.html" target="_blank"></a>
+  </div>
+
+
+<div class="item" data-title-kk="Пластырь" data-desc-kk="" data-btn-kk="толықырақ"
+                data-title-ru="Пластырь" data-desc-ru="" data-btn-ru="Подробнее">
+    <img src="өнім16.jpeg" />
+    <h3></h3>
+    <p></p>
+    <a href="pro16.html" target="_blank"></a>
+  </div>
+
+     <div class="item" data-title-kk="Әйелдердің іш киімі" data-desc-kk="" data-btn-kk="толықырақ"
+                data-title-ru="Женские трусы" data-desc-ru="" data-btn-ru="Подробнее">
+    <img src="өнім17.jpeg" />
+    <h3></h3>
+    <p></p>
+    <a href="pro17.html" target="_blank"></a>
+  </div>
+
+     <div class="item" data-title-kk="Жилет" data-desc-kk="" data-btn-kk="толықырақ"
+                data-title-ru="Жилет" data-desc-ru="" data-btn-ru="Подробнее">
+    <img src="өнім18.jpeg" />
+    <h3></h3>
+    <p></p>
+    <a href="pro18.html" target="_blank"></a>
+  </div>
+
+     <div class="item" data-title-kk="Көк шай селен" data-desc-kk="" data-btn-kk="толықырақ"
+                data-title-ru="зеленный чай селен" data-desc-ru="" data-btn-ru="Подробнее">
+    <img src="өнім19.jpeg" />
+    <h3></h3>
+    <p></p>
+    <a href="pro19.html" target="_blank"></a>
+  </div>
+
+     <div class="item" data-title-kk="Хуган чай" data-desc-kk="" data-btn-kk="толықырақ"
+                data-title-ru="Хуган чай" data-desc-ru="" data-btn-ru="Подробнее">
+    <img src="өнім20.jpeg" />
+    <h3></h3>
+    <p></p>
+    <a href="pro20.html" target="_blank"></a>
+  </div>
+
+     <div class="item" data-title-kk="Янсин чай" data-desc-kk="" data-btn-kk="толықырақ"
+                data-title-ru="Янсин чай" data-desc-ru="" data-btn-ru="Подробнее">
+    <img src="өнім21.jpeg" />
+    <h3></h3>
+    <p></p>
+    <a href="pro21.html" target="_blank"></a>
+  </div>
+
+     <div class="item" data-title-kk="Цзяньпи чай" data-desc-kk="" data-btn-kk="толықырақ"
+                data-title-ru="Цзяньпи чай" data-desc-ru="" data-btn-ru="Подробнее">
+    <img src="өнім22.jpeg" />
+    <h3></h3>
+    <p></p>
+    <a href="pro22.html" target="_blank"></a>
+  </div>
+
+     <div class="item" data-title-kk="Жуньфей чай" data-desc-kk="" data-btn-kk="толықырақ"
+                data-title-ru="Жуньфей чай" data-desc-ru="" data-btn-ru="Подробнее">
+    <img src="өнім23.jpeg" />
+    <h3></h3>
+    <p></p>
+    <a href="pro23.html" target="_blank"></a>
+  </div>
+
+     <div class="item" data-title-kk="Цзяншэнь чай" data-desc-kk="" data-btn-kk="толықырақ"
+                data-title-ru="Цзяншэнь чай" data-desc-ru="" data-btn-ru="Подробнее">
+    <img src="өнім24.jpeg" />
+    <h3></h3>
+    <p></p>
+    <a href="pro24.html" target="_blank"></a>
+  </div>
+  
+  <div class="item" data-title-kk="ЖҮРЕКТІ НЫҒАЙТУҒА АРНАЛҒАН КАРТА" data-desc-kk="" data-btn-kk="толықырақ"
+                data-title-ru="КАРТА ДЛЯ УКРЕПЛЕНИЯ СЕРДЦА" data-desc-ru="" data-btn-ru="Подробнее">
+    <img src="өнім25.jpeg" />
+    <h3></h3>
+    <p></p>
+    <a href="pro25.html" target="_blank"></a>
+  </div>
+
+     <div class="item" data-title-kk="СЙҚЫРЛЫ КАРТА" data-desc-kk="" data-btn-kk="толықырақ"
+                data-title-ru="ВОЛШЕБНАЯ КАРТА" data-desc-ru="" data-btn-ru="Подробнее">
+    <img src="өнім26.jpeg" />
+    <h3></h3>
+    <p></p>
+    <a href="pro26.html" target="_blank"></a>
+  </div>
+
+     <div class="item" data-title-kk="ОҚУШЫЛАРҒА АРНАЛҒАН КАРТА" data-desc-kk="" data-btn-kk="толықырақ"
+                data-title-ru="КАРТА ДЛЯ УЧАЩИХСЯ" data-desc-ru="" data-btn-ru="Подробнее">
+    <img src="өнім27.jpeg" />
+    <h3></h3>
+    <p></p>
+    <a href="pro27.html" target="_blank"></a>
+  </div>
+
+     <div class="item" data-title-kk="Суперұсақ биокальций" data-desc-kk="" data-btn-kk="толықырақ"
+                data-title-ru="СУПЕРМЕЛКИЙ БИОКАЛЬЦИЙ" data-desc-ru="" data-btn-ru="Подробнее">
+    <img src="өнім28.jpeg" />
+    <h3></h3>
+    <p></p>
+    <a href="pro28.html" target="_blank"></a>
+  </div>
+
+<div class="item" data-title-kk="Коллаген" data-desc-kk="" data-btn-kk="толықырақ"
+                data-title-ru="коллаген" data-desc-ru="" data-btn-ru="Подробнее">
+    <img src="өнім29.jpg" />
+    <h3></h3>
+    <p></p>
+    <a href="pro29.html" target="_blank"></a>
+  </div>
+
+
+  <!-- Қосымша өнімдерді осылай көбейте бер -->
+</section>
+
+<footer>
+  <p>© 2025 Авторлық құқық қорғалған. SG suundikovagulbanu</p>
+</footer>
+
+<!-- JavaScript: Тіл және іздеу -->
+<script>
+  function searchProducts() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let items = document.querySelectorAll(".item");
+
+    items.forEach(function(item) {
+      let title = item.querySelector("h3").textContent.toLowerCase();
+      let desc = item.querySelector("p").textContent.toLowerCase();
+
+      if (title.includes(input) || desc.includes(input)) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    });
+  }
+
+  function changeLanguage() {
+    let lang = document.getElementById("languageSelect").value;
+    let items = document.querySelectorAll(".item");
+
+    items.forEach(function(item) {
+      item.querySelector("h3").textContent = item.getAttribute(`data-title-${lang}`);
+      item.querySelector("p").textContent = item.getAttribute(`data-desc-${lang}`);
+      item.querySelector("a").textContent = item.getAttribute(`data-btn-${lang}`);
+    });
+
+    document.getElementById("contactLink").textContent = lang === "kk" ? "Байланыс" : "Контакты";
+    document.getElementById("searchInput").placeholder = lang === "kk" ? "Өнім іздеу..." : "Поиск товара...";
+  }
+
+  window.onload = changeLanguage;
+</script>
+
+</body>
+</html>
+

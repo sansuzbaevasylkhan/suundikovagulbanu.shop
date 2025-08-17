@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>КОРДИЦЕПС</title>
+  <link rel="icon" type="image/png" href="123.png">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f4f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #1565c0;
+      color: #fff;
+      padding: 15px 20px;
+    }
+
+    .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      height: 36px;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    .lang-select {
+      text-align: right;
+      margin-top: 10px;
+    }
+
+    #languageSelect {
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: none;
+      font-weight: bold;
+      color: #1565c0;
+      cursor: pointer;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .product-image {
+      width: 100%;
+      max-height: 600px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .product-title {
+      font-size: 1.8rem;
+      margin-top: 20px;
+      color: #1565c0;
+    }
+
+    .product-description {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background: #1565c0;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .back-button:hover {
+      background: #0d47a1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1565c0;
+      font-size: 0.9em;
+      color: #fff;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="top-row">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="SG Jewelry логотипі">
+      </a>
+      <nav>
+        <a href="index.html" id="nav-home">Басты бет</a>
+        <a href="contact.html" id="nav-contact">Байланыс</a>
+      </nav>
+    </div>
+    <div class="lang-select">
+      <select id="languageSelect" onchange="changeLanguage()">
+        <option value="kk">Қазақша 🇰🇿</option>
+        <option value="ru">Русский 🇷🇺</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- Product -->
+  <div class="container">
+    <img src="өнім3.jpeg" alt="Чудо Бриллиант" class="product-image">
+    <h1 class="product-title" id="product-title">Чудо Бриллиант</h1>
+    <p class="product-description" id="product-description">
+Ағзаның иммунитетін күшейту және ұзақ өмір сүру
+<br><b>Қолдану көрсеткіштері:</b>
+<br>• Ісіктердің (жақсы және қатерлі) алдын алу және қосымша ем ретінде;
+<br>• Отадан кейінгі қалпына келу кезеңінде;
+<br>• Дене әлсіздігі, созылмалы шаршау синдромы;
+<br>• Ауырсыну және өзін жайсыз сезіну;
+<br>• Ауыр аурулардан кейін қалпына келу үшін;
+<br>• Ұйқысыздық, шамадан тыс мазасыздық;
+<br>• Көңілдің түсуі, әлсіздік және есте сақтау қабілетінің төмендеуі;
+<br>• Күнделікті саулықты сақтау және денсаулықты қолдау үшін;
+<br>• Косметикалық және қартаюға қарсы әсері үшін;
+<br>• Жоғары қан қысымы, атеросклероз;
+<br>• Бет пен тері күтімі.
+    </p>
+
+    <a href="index.html" class="back-button" id="back-button">← Артқа қайту</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 SG suundikovagulbanu. Барлық құқықтар қорғалған.
+  </footer>
+
+  <script>
+    function changeLanguage() {
+      const lang = document.getElementById("languageSelect").value;
+
+      const elements = {
+        title: document.getElementById("product-title"),
+        description: document.getElementById("product-description"),
+        back: document.getElementById("back-button"),
+        navHome: document.getElementById("nav-home"),
+        navContact: document.getElementById("nav-contact")
+      };
+
+      if (lang === "kk") {
+        elements.title.textContent = "Чудо Бриллиант";
+        elements.description.innerHTML = `
+          Бұл ерекше «Чудо Бриллиант» әшекей бұйымы – заманауи сән мен нәзіктікті біріктірген туынды.  
+          Жоғары сапалы тастан жасалған, жарқыраған әрі сәнді көрінісімен кез келген кеште көздің жауын алады.  
+          Арнайы дизайн арқылы әйелдің сұлулығын ерекше айқындайды.  
+          <br><br>
+          💎 Материалы: Күміс / алтын жалатылған  
+          💎 Тасы: Жоғары сапалы цирконий  
+          💎 Өлшемі: Стандартты  
+          💎 Қаптамасы: Сыйлық қорапшасы  
+        `;
+        elements.back.textContent = "← Артқа қайту";
+        elements.navHome.textContent = "Басты бет";
+        elements.navContact.textContent = "Байланыс";
+      } else {
+        elements.title.textContent = "Кордицепс";
+        elements.description.innerHTML = `
+Укрепление иммунитета организма и долголетие
+<br><b>Показания к применению:</b>
+<br>• Для профилактики и вспомогательного лечения доброкачественных и злокачественных опухолей;
+<br>• В послеоперационный период для восстановления;
+<br>• Физическая слабость, синдром хронической усталости;
+<br>• Болезненность и недомогание;
+<br>• Для восстановления после тяжелых болезней;
+<br>• Бессонница, повышенное беспокойство;
+<br>• Подавленное состояние, слабость и ухудшение памяти;
+<br>• Для повседневного оздоровления и поддержания здоровья;
+<br>• Для косметического и анти-возрастного эффекта;
+<br>• Гипертония, атеросклероз;
+<br>• Уход за лицом и кожей.  
+        `;
+        elements.back.textContent = "← Назад";
+        elements.navHome.textContent = "Главная";
+        elements.navContact.textContent = "Контакты";
+      }
+    }
+  </script>
+
+</body>
+</html>

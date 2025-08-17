@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Чудо Бриллиант</title>
+  <link rel="icon" type="image/png" href="123.png">
+<style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f4f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #1565c0;
+      color: #fff;
+      padding: 15px 20px;
+    }
+
+    .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      height: 36px;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    .lang-select {
+      text-align: right;
+      margin-top: 10px;
+    }
+
+    #languageSelect {
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: none;
+      font-weight: bold;
+      color: #1565c0;
+      cursor: pointer;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .product-image {
+      width: 100%;
+      max-height: 600px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .product-title {
+      font-size: 1.8rem;
+      margin-top: 20px;
+      color: #1565c0;
+    }
+
+    .product-description {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background: #1565c0;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .back-button:hover {
+      background: #0d47a1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1565c0;
+      font-size: 0.9em;
+      color: #fff;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="top-row">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="SG Jewelry логотипі">
+      </a>
+      <nav>
+        <a href="index.html" id="nav-home">Басты бет</a>
+        <a href="contact.html" id="nav-contact">Байланыс</a>
+      </nav>
+    </div>
+    <div class="lang-select">
+      <select id="languageSelect" onchange="changeLanguage()">
+        <option value="kk">Қазақша 🇰🇿</option>
+        <option value="ru">Русский 🇷🇺</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- Product -->
+  <div class="container">
+    <img src="өнім1.jpeg" alt="Чудо Бриллиант" class="product-image">
+    <h1 class="product-title" id="product-title">БИОФОТОНДЫ ҒАЖАЙЫП-ГАУҺАР</h1>
+    <p class="product-description" id="product-description">
+      Тянь-ту нүктесі (мойын шұңқыры) — иммундық жүйені түзету, тамақ, қалқанша безі, өңеш, бронх аймағы ауруларын емдеуде және мойын мен жұтқыншақтағы қысылу сезімінде маңызды аймақ.
+
+Бұл нүктеге әсер ету келесі жағдайларда көмектеседі:
+бронхиалды астма,
+аллергия,
+өкпе мен мойын аурулары,
+өңеш, жұтқыншақ, бездер аурулары.
+Қолдану көрсеткіштері:
+Бронхиалды астма;
+Аллергия;
+Жиі болатын ЖРВИ, ЖРІ (әсіресе балаларда иммунитет әлсіздігі кезінде тиімді);
+Қалқанша безінің барлық аурулары;
+Бүйректегі тас аурулары;
+Омыртқаның жоғарғы бөлігіндегі аурулар;
+Бездердің, лимфа түйіндерінің қабынуы.
+
+  
+    </p>
+
+    <a href="index.html" class="back-button" id="back-button">← Артқа қайту</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 SG suundikovagulbanu. Барлық құқықтар қорғалған.
+  </footer>
+
+  <script>
+    function changeLanguage() {
+      const lang = document.getElementById("languageSelect").value;
+
+      const elements = {
+        title: document.getElementById("product-title"),
+        description: document.getElementById("product-description"),
+        back: document.getElementById("back-button"),
+        navHome: document.getElementById("nav-home"),
+        navContact: document.getElementById("nav-contact")
+      };
+
+      if (lang === "kk") {
+        elements.title.textContent = "БИОФОТОНДЫ ҒАЖАЙЫП-ГАУҺАР";
+        elements.description.innerHTML = `
+          Бұл ерекше «Чудо Бриллиант» әшекей бұйымы – заманауи сән мен нәзіктікті біріктірген туынды.  
+          Жоғары сапалы тастан жасалған, жарқыраған әрі сәнді көрінісімен кез келген кеште көздің жауын алады.  
+          Арнайы дизайн арқылы әйелдің сұлулығын ерекше айқындайды.  
+          <br><br>
+          💎 Материалы: Күміс / алтын жалатылған  
+          💎 Тасы: Жоғары сапалы цирконий  
+          💎 Өлшемі: Стандартты  
+          💎 Қаптамасы: Сыйлық қорапшасы  
+        `;
+        elements.back.textContent = "← Артқа қайту";
+        elements.navHome.textContent = "Басты бет";
+        elements.navContact.textContent = "Байланыс";
+      } else {
+        elements.title.textContent = "Чудо Бриллиант";
+        elements.description.innerHTML = `
+         Точка Тянь-ту (яремная впадина). Очень важная область для коррекции иммунной системы, для лечения горла, болезней щитовидной железы, пищевода, органов бронхиального пояса, эффективна при ощущении сдавления (горло, шея).
+
+Воздействие на эту точку помогает при бронхиальной астме, аллергии, болях в лёгких, шее, заболеваниях пищевода, глотке, миндалин.
+Показания к применению:
+Бронхиальная астма;
+Аллергия;
+Частые ОРЗ, ОРВИ, иммунодефициты (особенно эффективно использовать у детей);
+Все заболевания щитовидной железы;
+Мочекаменная болезнь;
+Заболевания грудного отдела;
+Воспаление миндалин, лимфатических узлов. 
+        `;
+        elements.back.textContent = "← Назад";
+        elements.navHome.textContent = "Главная";
+        elements.navContact.textContent = "Контакты";
+      }
+    }
+  </script>
+
+</body>
+</html>
